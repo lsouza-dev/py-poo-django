@@ -28,7 +28,7 @@ class CursoSerializer(serializers.ModelSerializer):
 class MatriculaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula   
-        exclude = []
+        fields = '__all__'
 
 class ListaMatriculaEstudanteSerializers(serializers.ModelSerializer):
     curso = serializers.ReadOnlyField(source='curso.descricao')

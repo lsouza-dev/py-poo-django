@@ -11,6 +11,7 @@ class ProdutoView(viewsets.ModelViewSet):
     ordering_fields = ['nome','categoria__id','preco']
     
     
+    
 
 class CategoriaView(viewsets.ModelViewSet):
     queryset = Categoria.objects.all().order_by('id')
